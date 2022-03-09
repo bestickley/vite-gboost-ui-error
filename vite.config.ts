@@ -9,14 +9,15 @@ export default defineConfig({
     // Shouldn't vite automatically pre-bundle prop-types since it's a part of gboost-ui?
     // And auto pre-bundle zen-observable since it's a part of aws-amplify?
     include: [
-      "prop-types",
       "aws-amplify",
       "@aws-amplify/ui-react",
-      "aws-amplify > zen-observable-ts > zen-observable",
-      "aws-amplify > @aws-amplify/core > @aws-sdk/client-cloudwatch-logs > @aws-sdk/url-parser-native > url",
-      "aws-amplify > @aws-amplify/core > @aws-sdk/client-cognito-identity > @aws-sdk/url-parser-native > url",
-      "aws-amplify > @aws-amplify/core > @aws-sdk/credential-provider-cognito-identity > @aws-sdk/client-cognito-identity > @aws-sdk/url-parser-native > url",
-      "aws-amplify > @aws-sdk/url-parser-native > url",
+      "prop-types",
+      "zen-observable",
+      "@aws-amplify/core",
+      "@aws-amplify/auth",
+      "@aws-amplify/api-rest",
+      "@aws-amplify/pubsub",
+      "amazon-cognito-identity-js",
     ],
   }
 })
